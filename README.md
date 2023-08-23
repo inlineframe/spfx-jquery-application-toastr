@@ -1,52 +1,56 @@
 ---
 page_type: sample
 products:
-- office-sp
+  - office-sp
 languages:
-- javascript
-- typescript
+  - javascript
+  - typescript
 extensions:
   contentType: samples
   technologies:
-  - SharePoint Framework
+    - SharePoint Framework
   platforms:
-  - jQuery
+    - jQuery
   createdDate: 8/1/2017 12:00:00 AM
 ---
+
 # SPFx Toastr Application Customizer
 
 ## Summary
+
 Sample SharePoint Framework application customizer extension that shows toast notifications configured from a SharePoint list. Demonstrates jQuery module loading, barrel configuration, promise chaining, and localStorage caching.
 
 ![Toasts shown on a Communication Site](./assets/spfxToastr-Preview.PNG)
 
-## Used SharePoint Framework version 
+## Used SharePoint Framework version
+
 ![1.4.1](https://img.shields.io/badge/version-1.4.1-green.svg)
 
 ## Applies to
 
-* [SharePoint Framework Extensions](https://dev.office.com/sharepoint/docs/spfx/extensions/overview-extensions)
-* [Toastr](http://codeseven.github.io/toastr/)
+- [SharePoint Framework Extensions](https://dev.office.com/sharepoint/docs/spfx/extensions/overview-extensions)
+- [Toastr](http://codeseven.github.io/toastr/)
 
 ## Solution
 
-Solution|Author(s)
---------|---------
-jquery-application-toastr | Chris Kent ([thechriskent.com](https://thechriskent.com), [@thechriskent](https://twitter.com/thechriskent))
+| Solution                  | Author(s)                                                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| jquery-application-toastr | Chris Kent ([thechriskent.com](https://thechriskent.com), [@thechriskent](https://twitter.com/thechriskent)) |
 
 ## Version history
 
-Version|Date|Comments
--------|----|--------
-1.0|July 9, 2017|Initial release
-1.1|August 20, 2017|Updated to use framework 1.1.3
-1.2|August 30, 2017|Updated to SPFx Release Candidate 1.2.0
-1.3|September 27, 2017|Updated for SPFx GA 1.3.0
-1.4|February 1, 2018|Updated to SPFx 1.4.0
-1.5|December 6, 2021|Fixed issue with icons and updated to SPFx 1.4.1
+| Version | Date               | Comments                                         |
+| ------- | ------------------ | ------------------------------------------------ |
+| 1.0     | July 9, 2017       | Initial release                                  |
+| 1.1     | August 20, 2017    | Updated to use framework 1.1.3                   |
+| 1.2     | August 30, 2017    | Updated to SPFx Release Candidate 1.2.0          |
+| 1.3     | September 27, 2017 | Updated for SPFx GA 1.3.0                        |
+| 1.4     | February 1, 2018   | Updated to SPFx 1.4.0                            |
+| 1.5     | December 6, 2021   | Fixed issue with icons and updated to SPFx 1.4.1 |
 
 ## Disclaimer
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+
+**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
 
 ---
 
@@ -66,6 +70,7 @@ Version|Date|Comments
   - Stand in awe of the glory of Toast
 
 ## Features
+
 SPFx Toastr utilizes Toastr to demonstrate how to display beautiful notifications in a familiar and intuitive manner.
 
 This extension illustrates the following concepts:
@@ -82,6 +87,7 @@ This extension illustrates the following concepts:
 - Optionally, **PnP Remote Provisioning** PowerShell list deployment _(see below)_
 
 ## Debug URL for testing
+
 Here's a debug querystring for testing this sample:
 
 ```
@@ -89,6 +95,7 @@ Here's a debug querystring for testing this sample:
 ```
 
 Your URL will look similar to the following (replace with your domain and site address):
+
 ```
 https://yourtenant.sharepoint.com/sites/yoursite?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a861c815-e425-416d-9520-04bcdf557e27":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{}}}
 ```
@@ -127,24 +134,25 @@ You can always manually create the list using the SharePoint UI:
 2. Name the list _**Toast**_ and click **Create**
 3. Add and configure the columns as listed below:
 
-Column | Type | Required | Details
---- | --- | --- | ---
-Title | Text | Yes |
-Message | Text | Yes |
-Severity | Choice | Yes | Info, Warning, Error, Success
-StartDate | DateTime | Yes | Date and Time, Default =Today
-EndDate | DateTime | Yes | Date and Time, Default =Today+7
-Frequency | Choice | Yes | Once, Once Per Day, Always
-Enabled | Yes/No | | Default = Yes
+| Column    | Type     | Required | Details                         |
+| --------- | -------- | -------- | ------------------------------- |
+| Title     | Text     | Yes      |
+| Message   | Text     | Yes      |
+| Severity  | Choice   | Yes      | Info, Warning, Error, Success   |
+| StartDate | DateTime | Yes      | Date and Time, Default =Today   |
+| EndDate   | DateTime | Yes      | Date and Time, Default =Today+7 |
+| Frequency | Choice   | Yes      | Once, Once Per Day, Always      |
+| Enabled   | Yes/No   |          | Default = Yes                   |
 
 ## Deploying to your tenant
+
 - In the command line navigate to **samples/jquery-application-toastr** and run:
   - `gulp bundle --ship`
   - `gulp package-solution --ship`
 - Open the **samples/jquery-application-toastr/sharepoint** folder
   - Drag the **toastr.sppkg** onto the **Apps for SharePoint** library of your app catalog
   - Check the box for tenant wide deployment and click **Deploy**:
-  ![Deploy to Catalog](./assets/DeployToCatalog.png)
+    ![Deploy to Catalog](./assets/DeployToCatalog.png)
 - You'll need to add the Custom Action to your site(s) using one of the methods below. You'll also need the list added using one of the options listed above in the List Deployment section
 
 ### Adding the custom action to your site
@@ -174,6 +182,7 @@ You'll be prompted for your credentials and then the action will be added. The o
 > Read More Here: [Introducing the PnP Provisioning Engine](https://github.com/SharePoint/PnP-Guidance/blob/551b9f6a66cf94058ba5497e310d519647afb20c/articles/Introducing-the-PnP-Provisioning-Engine.md)
 
 ### Option 2: Use the SPFx Extensions CLI
+
 You can use the [spfx-extensions-cli](https://www.npmjs.com/package/spfx-extensions-cli) to manage your extension custom actions across your sites.
 
 Install the CLI if you haven't already:
@@ -193,8 +202,8 @@ Remember, that you'll also need the list with some configured notifications in o
 > You can see what extensions you have on your site with `spfx-ext --site`
 
 ## Known issues
-- UI Fabric Icons are not currently displaying in SPFx Extensions: 
-  - [Issue 1279](https://github.com/SharePoint/sp-dev-docs/issues/1279) - Solution has been found, but fix has not yet been implemented
 
+- UI Fabric Icons are not currently displaying in SPFx Extensions:
+  - [Issue 1279](https://github.com/SharePoint/sp-dev-docs/issues/1279) - Solution has been found, but fix has not yet been implemented
 
 <img src="https://m365-visitor-stats.azurewebsites.net/sp-dev-fx-extensions/samples/jquery-application-toastr" />
