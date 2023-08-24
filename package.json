@@ -13,26 +13,27 @@
     "ship": "gulp clean && gulp bundle --ship && gulp package-solution --ship"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "1.17.4",
     "@microsoft/decorators": "1.17.4",
-    "@microsoft/sp-dialog": "1.17.4",
-    "@microsoft/sp-application-base": "1.17.4",
     "@microsoft/sp-adaptive-card-extension-base": "1.17.4",
+    "@microsoft/sp-application-base": "1.17.4",
+    "@microsoft/sp-core-library": "1.17.4",
+    "@microsoft/sp-dialog": "1.17.4",
     "@types/es6-promise": "0.0.33",
     "tslib": "2.3.1"
   },
   "devDependencies": {
-    "@microsoft/eslint-plugin-spfx": "1.17.4",
     "@microsoft/eslint-config-spfx": "1.17.4",
-    "eslint": "8.7.0",
+    "@microsoft/eslint-plugin-spfx": "1.17.4",
     "@microsoft/rush-stack-compiler-4.5": "0.5.0",
-    "@rushstack/eslint-config": "2.5.1",
     "@microsoft/sp-build-web": "1.17.4",
     "@microsoft/sp-module-interfaces": "1.17.4",
+    "@rushstack/eslint-config": "2.5.1",
+    "@types/es6-promise": "0.0.33",
     "@types/jquery": "2.0.48",
     "@types/toastr": "^2.1.35",
-    "@types/es6-promise": "0.0.33",
     "ajv": "6.12.5",
+    "eslint": "8.7.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gulp": "4.0.2",
     "typescript": "4.5.5"
   }
