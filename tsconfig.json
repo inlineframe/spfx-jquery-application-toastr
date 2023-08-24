@@ -2,24 +2,22 @@
   "compilerOptions": {
     "target": "es5",
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "esnext",
     "jsx": "react",
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "inlineSources": false,
     "declaration": true,
+    "noUnusedLocals": false,
     "sourceMap": true,
     "experimentalDecorators": true,
+    "strictNullChecks": false,
     "skipLibCheck": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./node_modules/@microsoft"
-    ],
-    "types": [
-      "es6-promise",
-      "webpack-env"
-    ],
-    "lib": [
-      "es5",
-      "dom",
-      "es2015.collection"
-    ]
-  }
+    "noImplicitAny": true,
+    "extends": "./node_modules/@microsoft/rush-stack-compiler-4.5/includes/tsconfig-web.json",
+    "typeRoots": ["./node_modules/@types", "./node_modules/@microsoft"],
+    "types": ["es6-promise", "webpack-env"],
+    "lib": ["es5", "dom", "es2015.collection", "es2015.promise"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

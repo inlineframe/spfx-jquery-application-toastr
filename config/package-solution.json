@@ -1,12 +1,40 @@
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
+    "developer": {
+      "name": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "websiteUrl": "",
+      "mpnId": "Undefined-1.15.0"
+    },
+    "features": [
+      {
+        "title": "jquery-application-toastr SpfxToastrApplicationCustomizer Feature",
+        "description": "The feature that activates SpfxToastrApplicationCustomizer from the jquery-application-toastr solution.",
+        "id": "a861c815-e425-416d-9520-04bcdf557e27",
+        "version": "1.4.0.0",
+        "componentIds": ["a861c815-e425-416d-9520-04bcdf557e27"]
+      }
+    ],
+    "metadata": {
+      "shortDescription": {
+        "default": "jquery-application-toastr description"
+      },
+      "longDescription": {
+        "default": "jquery-application-toastr description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
     "name": "Toastr Notifications",
     "id": "461c7ee8-3ab9-47ee-b52d-44c77087d9e8",
     "version": "1.4.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
-    "iconPath": "AppIcon.png"
+    "iconPath": "AppIcon.png",
+    "isDomainIsolated": false
   },
   "paths": {
     "zippedPackage": "solution/toastr.sppkg"

@@ -3,9 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+.heft
 # Dependency directories
 node_modules
-
+release
 # Build generated files
 dist
 lib
