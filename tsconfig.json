@@ -16,7 +16,7 @@
     "noImplicitAny": true,
     "esModuleInterop": true,
     "typeRoots": ["./node_modules/@types", "./node_modules/@microsoft"],
-    "types": ["es6-promise", "webpack-env"],
+    "types": ["es6-promise", "jquery", "toastr", "webpack-env"],
     "lib": ["es5", "dom", "es2015.collection", "es2015.promise"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
