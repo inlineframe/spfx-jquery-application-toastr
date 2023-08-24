@@ -21,6 +21,10 @@ const LOG_SOURCE: string = "SpfxToastrApplicationCustomizer";
  */
 export interface ISpfxToastrApplicationCustomizerProperties {
   //Nope
+  Title: string;
+  Message: string;
+  Frequency: string;
+  Id: number;
 }
 
 /** A Custom Action which can be run during execution of a Client Side Application */
@@ -80,7 +84,6 @@ export default class SpfxToastrApplicationCustomizer extends BaseApplicationCust
           "Completed"
         )}`,
       };
-      debugger;
 
       //***********************
       //Toast Display
@@ -88,9 +91,9 @@ export default class SpfxToastrApplicationCustomizer extends BaseApplicationCust
 
       this.toastsPromise
         .then((toasts: IToast[]) => {
-          for (let t of toasts) {
+          for (const t of toasts) {
             //Setup callbacks to track dismisal status
-            let overrides: ToastrOptions = {
+            const overrides: ToastrOptions = {
               onclick: () => {
                 ToastService.acknowledgeToast(
                   t.Id,
@@ -121,10 +124,10 @@ export default class SpfxToastrApplicationCustomizer extends BaseApplicationCust
             }
           }
         })
-        .catch((error: any): void => {
+        .catch((error: Error): void => {
           //Generic error handler for any issues that occurred throughout
           // the promise chain. Display it in a toast!
-          toastr.error(error, strings.FailedToLoad);
+          toastr.error(error.message, strings.FailedToLoad);
         });
     });
 
