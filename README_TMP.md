@@ -10,15 +10,16 @@ https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/jquery-application
 4. `cd ~/`
 5. `cp -aR ~/git/sp-dev-fx-extensions/samples/jquery-application-toastr ~/`
 6. `sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
-7. `cd ~/jquery-application-toastr`
-8. `nvm install 8`
-9. `nvm use 8`
-10. `npm install npm@4 -g` 
-11. Confirm you are using Nodejs version 8 and NPM version 4`node -v ; npm -v`
-12. `npm install`
-13. `gulp build`
-14. `gulp bundle --ship`
-15. `gulp package-solution --ship`
+7. `source ~/.bashrc`
+8. `cd ~/jquery-application-toastr`
+9. `nvm install 8`
+10. `nvm use 8`
+11. `npm install npm@4 -g` 
+12. Confirm you are using Nodejs version 8 and NPM version 4`node -v ; npm -v`
+13. `npm install`
+14. `gulp build`
+15. `gulp bundle --ship`
+16. `gulp package-solution --ship`
 
 Upload ~/jquery-application-toastr/sharepoint/solution/toastr.sppkg to Sharepoint Apps, enable for all sites.
 ### Sharepoint: Manually create the list
