@@ -36,3 +36,38 @@ StartDate | DateTime | Yes | Date and Time, Default =Today
 EndDate | DateTime | Yes | Date and Time, Default =Today+7
 Frequency | Choice | Yes | Once, Once Per Day, Always
 Enabled | Yes/No | | Default = Yes
+
+Add an item to the list. Do not use the same EndDate as the StartDate or it will not show.
+
+### SPFx - Add Custom List to Sharepoint
+
+1. `cd ~/jquery-application-toastr`
+2. `nvm install 16`
+3. `nvm use 16`
+4. `npm install -g @pnp/cli-microsoft365`
+5. `m365 login`
+Your web browser will open to: https://microsoft.com/devicelogin enter the code provided to login and follow prompts. 
+```
+~/jquery-application-toastr$ m365 login
+"To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CHHJUMAPW to authenticate."
+{
+  connectedAs: 'username@sptenant.onmicrosoft.com',
+  authType: 'DeviceCode',
+  appId: '41354c7f-bd7e-475c-86db-fdb8c937548e',
+  appTenant: 'common',
+  cloudType: 'Public'
+}
+```
+You are now connected to your Sharepoint site.
+
+6. Update the following command. Replacing --webUrl with the site you want to show Toast notifications on. Update --clientSideComponentId with your application Id. This is located in
+~/jquery-application-toastr/src/extensions/spfxToastr/SpfxToastrApplicationCustomizer.manifest.json - "id". Since we are working off a specific example, you will not need to update it since it will be the same as the current value.
+
+Then run it.
+
+```
+m365 spo customaction add --webUrl https://SPTENANT.sharepoint.com/sites/SampleSite --title "Toastr Notifications" --name "jquery-application-toastr" --location "ClientSideExtension.ApplicationCustomizer" --clientSideComponentId a861c815-e425-416d-9520-04bcdf557e27 --clientSideComponentProperties ''
+```
+
+After the command completes, refresh the site. You should see the Toast Notification. 
+
