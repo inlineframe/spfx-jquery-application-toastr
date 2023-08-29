@@ -20,3 +20,19 @@ https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/jquery-application
 14. `gulp bundle --ship`
 15. `gulp package-solution --ship`
 
+Upload ~/jquery-application-toastr/sharepoint/solution/toastr.sppkg to Sharepoint Apps, enable for all sites.
+### Option 2: Manually create the list
+
+1. Navigate to the Site Contents page and choose **New** > **List**
+2. Name the list _**Toast**_ and click **Create**
+3. Add and configure the columns as listed below:
+
+Column | Type | Required | Details
+--- | --- | --- | ---
+Title | Text | Yes |
+Message | Text | Yes |
+Severity | Choice | Yes | Info, Warning, Error, Success
+StartDate | DateTime | Yes | Date and Time, Default =Today
+EndDate | DateTime | Yes | Date and Time, Default =Today+7
+Frequency | Choice | Yes | Once, Once Per Day, Always
+Enabled | Yes/No | | Default = Yes
