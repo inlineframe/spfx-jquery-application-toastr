@@ -14,7 +14,7 @@ https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/jquery-application
 8. `cd ~/jquery-application-toastr`
 9. `nvm install 8`
 10. `nvm use 8`
-11. `npm install npm@4 -g` 
+11. `npm install npm@4 --save-dev` 
 12. Confirm you are using Nodejs version 8 and NPM version 4`node -v ; npm -v`
 13. `npm install`
 14. `gulp build`
