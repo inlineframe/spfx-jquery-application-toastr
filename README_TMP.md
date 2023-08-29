@@ -71,3 +71,5 @@ m365 spo customaction add --webUrl https://SPTENANT.sharepoint.com/sites/SampleS
 
 After the command completes, refresh the site. You should see the Toast Notification. 
 
+If you want to create a new build, you will need to revert back to nodejs 8.
+```nvm use 8```
