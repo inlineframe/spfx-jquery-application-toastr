@@ -21,7 +21,7 @@ https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/jquery-application
 15. `gulp package-solution --ship`
 
 Upload ~/jquery-application-toastr/sharepoint/solution/toastr.sppkg to Sharepoint Apps, enable for all sites.
-### Option 2: Manually create the list
+### Sharepoint: Manually create the list
 
 1. Navigate to the Site Contents page and choose **New** > **List**
 2. Name the list _**Toast**_ and click **Create**
