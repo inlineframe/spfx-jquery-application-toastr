@@ -17,9 +17,10 @@ https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/jquery-application
 11. `npm install npm@4 -g` 
 12. Confirm you are using Nodejs version 8 and NPM version 4`node -v ; npm -v`
 13. `npm install`
-14. `gulp build`
-15. `gulp bundle --ship`
-16. `gulp package-solution --ship`
+14.  `npm install gulp -g`
+15. `gulp build`
+16. `gulp bundle --ship`
+17. `gulp package-solution --ship`
 
 Upload ~/jquery-application-toastr/sharepoint/solution/toastr.sppkg to Sharepoint Apps, enable for all sites.
 ### Sharepoint: Manually create the list
