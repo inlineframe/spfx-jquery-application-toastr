@@ -60,7 +60,8 @@ Your web browser will open to: https://microsoft.com/devicelogin enter the code 
 ```
 You are now connected to your Sharepoint site.
 
-6. Update the following command. Replacing --webUrl with the site you want to show Toast notifications on. Update --clientSideComponentId with your application Id. This is located in
+6. Update the following command. Replacing --webUrl with the site you want to show Toast notifications on.
+Update --clientSideComponentId with your application Id. This is located in
 ~/jquery-application-toastr/src/extensions/spfxToastr/SpfxToastrApplicationCustomizer.manifest.json - "id". Since we are working off a specific example, you will not need to update it since it will be the same as the current value.
 
 Then run it.
